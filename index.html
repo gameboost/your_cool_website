@@ -1,1 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Website</title>
+</head>
+<body style="text-align:center;" >
+<div style="color: white;font-size: 56px; transform: translate(0, -50%); margin-top:25%"><b>My Website</b></div>
+<script type="text/javascript">
+	 (function(){
+		let color = 0;
+		let y = (x, z) => {return ((1+Math.sin(x/z))/2)*255};
+		let update = function()
+		{
+			color+=4;
+			document.body.style.backgroundColor = "rgb("+y(color, 255)+", "+y(color, 255*255)+", "+y(color, 255*255*255)+")";
+			requestAnimationFrame(update);
+		}
 
+		update();
+	 })();
+</script>
+</body>
+</html>
